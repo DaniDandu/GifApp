@@ -1,12 +1,13 @@
 import json
 from urllib import parse, request
+from api_key import key
 
 def search(name: str):
     url = "http://api.giphy.com/v1/gifs/search"
 
     params = parse.urlencode({
     "q": name,
-    "api_key": "YiOyxQUsbE08uf01JVLy4VG0lHoE0AfV",
+    "api_key": str(key),
     "limit": "5"
     })
 
